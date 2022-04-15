@@ -35,7 +35,7 @@ export class AppsyncCdkRdsStack extends cdk.Stack {
 
     // Create the Lambda function that will map GraphQL operations into Postgres
     const postFn = new lambda.Function(this, 'MyFunction', {
-      runtime: lambda.Runtime.NODEJS_10_X,
+      runtime: lambda.Runtime.NODEJS_14_X,
       code: new lambda.AssetCode('lambda-fns'),
       handler: 'index.handler',
       memorySize: 1024,
